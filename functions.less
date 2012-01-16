@@ -1,0 +1,19 @@
+﻿// linear gradient for all browsers
+.gradient (@startcolor, @endcolor, @startpercent: 0%, @endpercent: 100%) {
+
+    background: @startcolor; /* Old browsers */
+	background: -moz-linear-gradient(top, @startcolor @startpercent, @endcolor @endpercent); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(@startpercent,@startcolor), color-stop(@endpercent,@endcolor)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @startcolor @startpercent,@endcolor @endpercent); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @startcolor @startpercent,@endcolor @endpercent); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, @startcolor @startpercent,@endcolor @endpercent); /* IE10+ */
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor)); /* IE6-9 */
+	background: linear-gradient(top, @startcolor @startpercent,@endcolor @endpercent); /* W3C */
+}
+
+//rounded corner
+.rounded (@radius) {
+
+    -moz-border-radius: @radius;
+	border-radius: @radius;
+}
